@@ -1,0 +1,9 @@
+- [x] Verify that the copilot-instructions.md file in the .github directory is created.
+- [x] Clarify Project Requirements (Next.js + React + Tailwind, App Router, SEO/Performance)
+- [x] Scaffold the Project (`create-next-app` in workspace root)
+- [x] Customize the Project (Premium One‑Pager + Sections + Legal Pages + Contact API)
+- [x] Install Required Extensions (none required)
+- [x] Compile the Project (`npm run build` passes)
+- [ ] Create and Run Task (optional)
+- [ ] Launch the Project (ask user before starting dev server)
+- [x] Ensure Documentation is Complete (README updated)

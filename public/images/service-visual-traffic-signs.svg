@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700" role="img" aria-label="Verkehrszeichenaufstellung">
+  <rect width="900" height="700" fill="#ffffff"/>
+
+  <!-- ground -->
+  <path d="M0 560 H900" stroke="#111111" stroke-width="2" />
+
+  <!-- sign stand (tripod) -->
+  <g fill="none" stroke="#111111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M450 170 V520" />
+    <path d="M450 520 L360 610" />
+    <path d="M450 520 L540 610" />
+    <path d="M450 520 L450 620" />
+  </g>
+
+  <!-- sign plate -->
+  <g fill="#ffffff" stroke="#111111" stroke-width="10" stroke-linejoin="round">
+    <rect x="330" y="95" width="240" height="150" rx="18" />
+  </g>
+
+  <!-- sign content: simplified no-parking & arrow -->
+  <g fill="none" stroke="#111111" stroke-width="10" stroke-linecap="round">
+    <circle cx="390" cy="170" r="36" />
+    <path d="M366 194 L414 146" />
+    <path d="M460 170 H530" />
+    <path d="M515 154 L530 170 L515 186" />
+  </g>
+
+  <!-- cones -->
+  <g fill="none" stroke="#111111" stroke-width="10" stroke-linejoin="round">
+    <path d="M190 610 L230 480 L270 610 Z" />
+    <path d="M210 555 H250" />
+    <path d="M205 585 H255" />
+
+    <path d="M630 610 L670 480 L710 610 Z" />
+    <path d="M650 555 H690" />
+    <path d="M645 585 H695" />
+  </g>
+
+  <!-- subtle tools box -->
+  <g fill="#ffffff" stroke="#111111" stroke-width="10" stroke-linejoin="round">
+    <rect x="90" y="520" width="110" height="70" rx="12" />
+    <path d="M110 520 V500 H180 V520" />
+  </g>
+</svg>
