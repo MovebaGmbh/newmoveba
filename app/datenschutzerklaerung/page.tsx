@@ -20,10 +20,10 @@ export default function DatenschutzerklaerungPage() {
           <p className="mt-4 text-sm text-zinc-600">Stand: März 2026</p>
 
           <p className="mt-6 text-sm leading-relaxed text-zinc-700">
-            Wir nehmen den Schutz Ihrer personenbezogenen Daten ernst. In dieser
-            Datenschutzerklärung informieren wir Sie darüber, welche Daten beim
-            Besuch dieser Website und bei einer Kontaktaufnahme verarbeitet werden
-            und zu welchen Zwecken.
+            Diese Website ist eine statische Informationsseite. Wir verwenden kein
+            Tracking und keine Marketing-Cookies. Personenbezogene Daten fallen im
+            Wesentlichen nur durch das Hosting (Server-Logfiles) sowie bei einer
+            Kontaktaufnahme an.
           </p>
 
           <div className="mt-10 space-y-10">
@@ -53,26 +53,25 @@ export default function DatenschutzerklaerungPage() {
                 2. Hosting
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                Unsere Website wird bei einem Hosting-Dienstleister betrieben. Beim
-                Aufruf der Website werden aus technischen Gründen Daten verarbeitet,
-                die Ihr Browser an den Server übermittelt (sog.&nbsp;Server-Logfiles).
-                Dazu können insbesondere gehören: IP-Adresse, Datum und Uhrzeit der
-                Anfrage, aufgerufene Seite/Datei, Referrer-URL, Browsertyp/-version,
-                Betriebssystem sowie der Zugriffsstatus.
+                Die Website wird über GitHub bereitgestellt (z.&nbsp;B. GitHub
+                Pages). Beim Aufruf verarbeitet GitHub aus technischen Gründen
+                Verbindungsdaten (Server-Logfiles), insbesondere IP-Adresse, Datum
+                und Uhrzeit, aufgerufene Seite sowie Browser-/Systeminformationen.
+                Zweck ist die Auslieferung der Website sowie IT-Sicherheit.
+                Rechtsgrundlage: Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                Zweck der Verarbeitung ist die Auslieferung der Website,
-                Gewährleistung der IT-Sicherheit (z.&nbsp;B. Abwehr von Angriffen)
-                sowie die Fehleranalyse. Rechtsgrundlage ist Art.&nbsp;6
-                Abs.&nbsp;1 lit.&nbsp;f DSGVO (berechtigtes Interesse an einem
-                sicheren und funktionsfähigen Webauftritt).
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                Empfänger der Daten kann unser Hosting-Dienstleister als
-                Auftragsverarbeiter sein. Eine Verarbeitung außerhalb der EU/des
-                EWR kann je nach Hosting-Anbieter nicht ausgeschlossen werden. In
-                diesem Fall stellen wir sicher, dass geeignete Garantien nach
-                Art.&nbsp;44&nbsp;ff. DSGVO bestehen.
+                Dabei kann eine Verarbeitung in Drittländern (z.&nbsp;B. USA) nicht
+                ausgeschlossen werden. Weitere Informationen finden Sie in der
+                <a
+                  className="underline"
+                  href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Datenschutzerklärung von GitHub
+                </a>
+                .
               </p>
             </section>
 
@@ -81,23 +80,14 @@ export default function DatenschutzerklaerungPage() {
                 3. Kontaktaufnahme
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                Wenn Sie uns kontaktieren (z.&nbsp;B. per E-Mail oder telefonisch),
-                verarbeiten wir die Daten, die Sie uns im Rahmen der Anfrage
-                mitteilen (z.&nbsp;B. Name, Kontaktdaten und Inhalt der Nachricht),
-                um Ihre Anfrage zu bearbeiten und mit Ihnen zu kommunizieren.
+                Wenn Sie uns per E-Mail oder telefonisch kontaktieren, verarbeiten
+                wir die von Ihnen übermittelten Daten (z.&nbsp;B. Name,
+                Kontaktdaten, Inhalt), um Ihre Anfrage zu beantworten.
               </p>
-
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                Rechtsgrundlage ist in der Regel Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b
-                DSGVO (vorvertragliche Maßnahmen/Vertragserfüllung) bzw.
-                Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO (berechtigtes Interesse an
-                der Beantwortung von Anfragen).
-              </p>
-
-              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                Speicherdauer: Wir löschen Anfragen grundsätzlich, sobald sie
-                abschließend bearbeitet sind, sofern keine gesetzlichen
-                Aufbewahrungspflichten entgegenstehen.
+                Rechtsgrundlage: Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO (Anbahnung
+                oder Durchführung eines Vertrags) und/oder Art.&nbsp;6 Abs.&nbsp;1
+                lit.&nbsp;f DSGVO (Beantwortung von Anfragen).
               </p>
             </section>
 
@@ -106,13 +96,13 @@ export default function DatenschutzerklaerungPage() {
                 4. Cookies &amp; Tracking
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                Wir setzen keine Cookies zu Analyse- oder Marketingzwecken ein und
-                verwenden keine Tracking- oder Profiling-Tools.
+                Wir setzen keine Analyse-/Marketing-Cookies ein und nutzen keine
+                Tracking-Tools.
               </p>
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                Technisch notwendige Verarbeitungen (z.&nbsp;B. zur Darstellung der
-                Website) erfolgen ohne Cookies oder nur mit solchen, die für den
-                Betrieb zwingend erforderlich wären.
+                Optional speichern wir Ihre Sprachwahl lokal in einem funktionalen
+                Cookie (<span className="font-medium">lang</span>, Speicherdauer:
+                12 Monate), damit die Auswahl beim nächsten Besuch erhalten bleibt.
               </p>
             </section>
 
@@ -121,9 +111,7 @@ export default function DatenschutzerklaerungPage() {
                 5. Sicherheit
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                Wir treffen angemessene technische und organisatorische Maßnahmen,
-                um Ihre Daten zu schützen. Die Übertragung von Inhalten erfolgt in
-                der Regel verschlüsselt (TLS/HTTPS).
+                Die Übertragung erfolgt in der Regel verschlüsselt (HTTPS).
               </p>
             </section>
 
@@ -132,16 +120,10 @@ export default function DatenschutzerklaerungPage() {
                 6. Ihre Rechte
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                Sie haben das Recht auf Auskunft über die Verarbeitung Ihrer
-                personenbezogenen Daten sowie auf Berichtigung, Löschung,
-                Einschränkung der Verarbeitung und Datenübertragbarkeit. Außerdem
-                können Sie sich bei einer Aufsichtsbehörde beschweren.
-              </p>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                Soweit wir Daten auf Grundlage von Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f
-                DSGVO verarbeiten, können Sie aus Gründen, die sich aus Ihrer
-                besonderen Situation ergeben, Widerspruch gegen die Verarbeitung
-                einlegen.
+                Sie haben insbesondere die Rechte auf Auskunft, Berichtigung,
+                Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit
+                sowie Widerspruch. Außerdem besteht ein Beschwerderecht bei einer
+                Datenschutz-Aufsichtsbehörde.
               </p>
             </section>
 
