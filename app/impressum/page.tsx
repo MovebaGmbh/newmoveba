@@ -68,15 +68,7 @@ export default function ImpressumPage() {
               </p>
             </section>
 
-            <section aria-labelledby="hinweise">
-              <h2 id="hinweise" className="text-lg font-semibold text-zinc-900">
-                Hinweise
-              </h2>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                Registerangaben (Handelsregister/HRB), Umsatzsteuer-ID und weitere
-                Pflichtangaben bitte ergänzen, falls zutreffend.
-              </p>
-            </section>
+
           </div>
         </div>
       </Container>
