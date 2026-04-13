@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="referrer" content="no-referrer" />
+  <title>MOVEBA Bestätigung</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 24px;
+    }
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      color: #1d4ed8;
+    }
+    p {
+      margin: 0 0 16px;
+      line-height: 1.5;
+    }
+    a {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      background: #2563eb;
+      color: white;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>MOVEBA</h1>
+    <p id="message">Bestätigung wird geöffnet ...</p>
+    <a id="openApp" href="#" style="display:none;">App öffnen</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const tokenHash = params.get('token_hash');
+    const type = params.get('type');
+
+    const message = document.getElementById('message');
+    const openApp = document.getElementById('openApp');
+
+    if (!tokenHash || type !== 'signup') {
+      message.textContent = 'Ungültiger oder abgelaufener Bestätigungslink.';
+    } else {
+      const deepLink =
+        'movebaapp://auth/confirm?token_hash=' +
+        encodeURIComponent(tokenHash) +
+        '&type=' +
+        encodeURIComponent(type);
+
+      window.location.href = deepLink;
+
+      setTimeout(() => {
+        message.textContent = 'Falls sich die App nicht automatisch geöffnet hat, klicken Sie bitte auf den Button.';
+        openApp.href = deepLink;
+        openApp.style.display = 'inline-block';
+      }, 1200);
+    }
+  </script>
+</body>
+</html>
