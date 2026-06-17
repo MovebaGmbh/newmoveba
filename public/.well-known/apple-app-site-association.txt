@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "HIER_TEAMID.com.maxmaier0707.movebaapp",
+        "paths": ["/auth/confirm", "/auth/confirm/*"]
+      }
+    ]
+  }
+}

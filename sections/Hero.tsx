@@ -17,11 +17,13 @@ export default function Hero({ lang }: Props) {
     <section aria-label="Einführung" className="relative overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="/images/moveba_van_blurred_stronger_1920x1080.png"
+          src="/images/hero-bg-1280.jpg"
           alt={t.hero.bgAlt}
           fill
           priority
           sizes="100vw"
+          quality={68}
+          fetchPriority="high"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-white/35 via-white/10 to-white/70" />

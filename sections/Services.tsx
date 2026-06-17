@@ -75,10 +75,12 @@ export default function Services({ lang }: Props) {
               <Reveal>
                 <div className="relative overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
                   <Image
-                    src="/images/service-visual-2.jpeg"
+                    src="/images/service-visual-2-optimized.jpg"
                     alt={t.services.visuals.movingTruckAlt}
                     width={900}
                     height={700}
+                    sizes="(min-width: 1024px) 40vw, 100vw"
+                    quality={70}
                     className="h-auto w-full object-cover"
                     loading="lazy"
                   />
@@ -91,6 +93,7 @@ export default function Services({ lang }: Props) {
                     alt={t.services.visuals.trafficSignsAlt}
                     width={900}
                     height={700}
+                    sizes="(min-width: 1024px) 40vw, 100vw"
                     className="h-auto w-full object-cover"
                     loading="lazy"
                   />

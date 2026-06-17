@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="referrer" content="no-referrer" />
+  <title>MOVEBA Bestätigung</title>
+</head>
+<body>
+  <p id="msg">Bestätigung wird geöffnet ...</p>
+  <a id="open" href="#" style="display:none">App öffnen</a>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const token_hash = params.get('token_hash');
+    const type = params.get('type') || 'signup';
+
+    if (!token_hash || type !== 'signup') {
+      document.getElementById('msg').textContent = 'Ungültiger Bestätigungslink.';
+    } else {
+      const deep = 'movebaapp://auth/confirm?token_hash=' + encodeURIComponent(token_hash) + '&type=' + encodeURIComponent(type);
+      window.location.href = deep;
+
+      setTimeout(() => {
+        document.getElementById('msg').textContent = 'Falls die App nicht automatisch geöffnet wurde, klicken Sie auf App öffnen.';
+        const a = document.getElementById('open');
+        a.href = deep;
+        a.style.display = 'inline-block';
+      }, 1200);
+    }
+  </script>
+</body>
+</html>
