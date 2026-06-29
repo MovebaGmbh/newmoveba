@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import { cookies } from "next/headers";
 
 import SiteFooter from "@/components/SiteFooter";
@@ -9,7 +9,7 @@ import { getLangFromCookies, I18N } from "@/lib/i18n";
 
 import "../styles/globals.css";
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
   display: "swap",
 });
@@ -56,7 +56,7 @@ export default async function RootLayout({
   return (
     <html lang={lang} className="h-full">
       <body
-        className={`${inter.className} min-h-screen bg-white text-zinc-900 antialiased`}
+        className={`${manrope.className} min-h-screen bg-white text-zinc-900 antialiased`}
       >
         {/* JSON-LD: minimal, ohne erfundene Firmendaten (Adresse/Telefon kommen aus SITE). */}
         <script
@@ -68,7 +68,7 @@ export default async function RootLayout({
               name: SITE.name,
               url: SITE.url,
               email: SITE.email,
-              telephone: SITE.phones.map((p) => p.value),
+              telephone: SITE.phones[0].value,
               address: {
                 "@type": "PostalAddress",
                 streetAddress: SITE.address.street,

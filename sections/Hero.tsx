@@ -55,6 +55,9 @@ export default function Hero({ lang }: Props) {
                 <Button href={`tel:${SITE.phones[0].value}`} size="lg">
                   {t.cta.callNow}
                 </Button>
+                <Button href="/leistungen" variant="secondary" size="lg">
+                  Leistungen ansehen
+                </Button>
               </div>
             </Reveal>
 

@@ -51,7 +51,7 @@ export default function ImpressumPage() {
                 Kontakt
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">
-                E-Mail:{" "}
+                E-Mail: {" "}
                 <a className="underline" href={`mailto:${SITE.email}`}>
                   {SITE.email}
                 </a>
@@ -60,14 +60,16 @@ export default function ImpressumPage() {
                 {SITE.phones.map((p, idx) => (
                   <span key={p.value}>
                     <a className="underline" href={`tel:${p.value}`}>
-                      {p.display} ({p.role === "ceo" ? "Geschäftsführer" : "Stellv. Geschäftsführer"})
+                      {p.display} (
+                      {p.role === "ceo"
+                        ? "Geschäftsführer"
+                        : "Stellv. Geschäftsführer"}
                     </a>
                     {idx === SITE.phones.length - 1 ? "" : " · "}
                   </span>
                 ))}
               </p>
             </section>
-
           </div>
         </div>
       </Container>

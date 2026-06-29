@@ -47,6 +47,29 @@ export const I18N = {
         clearValue: "Klare Absprachen",
       },
     },
+      contactForm: {
+        eyebrow: "Anfrage",
+        title: "Projekt oder Umzug anfragen",
+        description:
+          "Nutzen Sie das Formular für eine schnelle, strukturierte Anfrage. Wir melden uns zeitnah zurück.",
+        name: "Name",
+        phone: "Telefon",
+        email: "E-Mail",
+        service: "Dienstleistung",
+        preferredDate: "Wunschtermin",
+        address: "Adresse",
+        message: "Nachricht",
+        privacy: "Ich habe die Datenschutzhinweise gelesen und stimme der Verarbeitung meiner Angaben zur Bearbeitung meiner Anfrage zu.",
+        submit: "Absenden",
+        success: "Vielen Dank. Ihre Anfrage wurde übermittelt.",
+        error: "Leider konnte die Anfrage nicht gesendet werden. Bitte versuchen Sie es erneut oder rufen Sie direkt an.",
+        loading: "Wird gesendet...",
+        required: "Pflichtfeld",
+        honeypot: "Website",
+        servicePlaceholder: "Bitte wählen",
+        replyNote:
+          "Nach dem Absenden erhalten Sie eine automatische Eingangsbestätigung per E-Mail.",
+      },
     services: {
       eyebrow: "Dienstleistungen",
       title: "Alles aus einer Hand – schnell, sauber, zuverlässig",
@@ -80,7 +103,7 @@ export const I18N = {
         },
       ],
       visuals: {
-        movingTruckAlt: "Beladener Umzugswagen mit Umzugskartons",
+        deliveryAlt: "Zwei Möbelträger transportieren ein Sofa in ein neues Zuhause",
         trafficSignsAlt:
           "Verkehrszeichenaufstellung: Absicherung mit Schildern und Pylonen",
       },
@@ -161,6 +184,29 @@ export const I18N = {
         clearValue: "Clear agreements",
       },
     },
+      contactForm: {
+        eyebrow: "Request",
+        title: "Request your move or job",
+        description:
+          "Use the form for a quick, structured inquiry. We will get back to you shortly.",
+        name: "Name",
+        phone: "Phone",
+        email: "Email",
+        service: "Service",
+        preferredDate: "Preferred date",
+        address: "Address",
+        message: "Message",
+        privacy: "I have read the privacy information and agree to the processing of my details for handling my request.",
+        submit: "Send",
+        success: "Thank you. Your request has been sent.",
+        error: "Unfortunately the request could not be sent. Please try again or call us directly.",
+        loading: "Sending...",
+        required: "Required field",
+        honeypot: "Website",
+        servicePlaceholder: "Please choose",
+        replyNote:
+          "After submitting, you will receive an automatic confirmation email.",
+      },
     services: {
       eyebrow: "Services",
       title: "Everything from one source — fast, clean, reliable",
@@ -181,6 +227,29 @@ export const I18N = {
           title: "Furniture delivery",
           description:
             "Fast and punctual: we deliver furniture safely into your home — including carrying service and careful handling.",
+      contactForm: {
+        eyebrow: "Заявка",
+        title: "Заказать переезд или услугу",
+        description:
+          "Используйте форму для быстрой и понятной заявки. Мы свяжемся с вами в ближайшее время.",
+        name: "Имя",
+        phone: "Телефон",
+        email: "E-mail",
+        service: "Услуга",
+        preferredDate: "Желаемая дата",
+        address: "Адрес",
+        message: "Сообщение",
+        privacy: "Я ознакомился с политикой конфиденциальности и согласен на обработку моих данных для обработки заявки.",
+        submit: "Отправить",
+        success: "Спасибо. Ваша заявка отправлена.",
+        error: "К сожалению, заявку не удалось отправить. Попробуйте еще раз или позвоните напрямую.",
+        loading: "Отправка...",
+        required: "Обязательное поле",
+        honeypot: "Website",
+        servicePlaceholder: "Выберите услугу",
+        replyNote:
+          "После отправки вы получите автоматическое подтверждение по e-mail.",
+      },
         },
         {
           title: "Furniture assembly",
@@ -194,7 +263,7 @@ export const I18N = {
         },
       ],
       visuals: {
-        movingTruckAlt: "Loaded moving truck with moving boxes",
+        deliveryAlt: "Two furniture movers carrying a sofa into a new home",
         trafficSignsAlt: "Traffic sign setup with cones and signage",
       },
     },
@@ -307,7 +376,7 @@ export const I18N = {
         },
       ],
       visuals: {
-        movingTruckAlt: "Загруженный грузовик с коробками для переезда",
+        deliveryAlt: "Два грузчика переносят диван в новый дом",
         trafficSignsAlt: "Установка дорожных знаков с конусами и табличками",
       },
     },

@@ -89,11 +89,36 @@ export default function DatenschutzerklaerungPage() {
                 oder Durchführung eines Vertrags) und/oder Art.&nbsp;6 Abs.&nbsp;1
                 lit.&nbsp;f DSGVO (Beantwortung von Anfragen).
               </p>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
+                Wenn Sie unser Anfrageformular nutzen, verarbeiten wir zusätzlich
+                die angegebenen Pflicht- und Freitextangaben, Ihren Wunschzeitpunkt
+                sowie technische Schutzangaben (z.&nbsp;B. Spam-Prüfung und Sendezeitpunkt),
+                um Ihre Anfrage zu bearbeiten und eine Eingangsbestätigung zu senden.
+                Eine Speicherung erfolgt nur so lange, wie es für die Bearbeitung
+                Ihrer Anfrage erforderlich ist.
+              </p>
+            </section>
+
+            <section aria-labelledby="kontaktformular">
+              <h2 id="kontaktformular" className="text-lg font-semibold text-zinc-900">
+                4. Kontaktformular und E-Mail-Versand
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
+                Das Formular wird serverseitig geprüft und an unsere Unternehmensadresse
+                weitergeleitet. Zusätzlich erhält die angegebene E-Mail-Adresse eine
+                automatische Eingangsbestätigung. Für den Versand nutzen wir einen
+                externen E-Mail-Dienstanbieter, soweit dieser technisch erforderlich ist.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-700">
+                Verarbeitet werden dabei ausschließlich die Daten, die Sie aktiv
+                übermitteln. Nicht benötigte Daten werden nicht gespeichert.
+                Eine Weitergabe zu Werbezwecken erfolgt nicht.
+              </p>
             </section>
 
             <section aria-labelledby="cookies">
               <h2 id="cookies" className="text-lg font-semibold text-zinc-900">
-                4. Cookies &amp; Tracking
+                5. Cookies &amp; Tracking
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">
                 Wir setzen keine Analyse-/Marketing-Cookies ein und nutzen keine
@@ -108,7 +133,7 @@ export default function DatenschutzerklaerungPage() {
 
             <section aria-labelledby="sicherheit">
               <h2 id="sicherheit" className="text-lg font-semibold text-zinc-900">
-                5. Sicherheit
+                6. Sicherheit
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">
                 Die Übertragung erfolgt in der Regel verschlüsselt (HTTPS).
@@ -117,7 +142,7 @@ export default function DatenschutzerklaerungPage() {
 
             <section aria-labelledby="rechte">
               <h2 id="rechte" className="text-lg font-semibold text-zinc-900">
-                6. Ihre Rechte
+                7. Ihre Rechte
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">
                 Sie haben insbesondere die Rechte auf Auskunft, Berichtigung,
@@ -129,7 +154,7 @@ export default function DatenschutzerklaerungPage() {
 
             <section aria-labelledby="aenderungen">
               <h2 id="aenderungen" className="text-lg font-semibold text-zinc-900">
-                7. Änderungen dieser Datenschutzerklärung
+                8. Änderungen dieser Datenschutzerklärung
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-zinc-700">
                 Wir passen diese Datenschutzerklärung an, wenn sich die

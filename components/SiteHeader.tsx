@@ -24,7 +24,7 @@ export default function SiteHeader({ lang: initialLang }: Props) {
   const t = I18N[lang];
 
   const nav = [
-    { label: t.nav.services, href: "#services" },
+    { label: t.nav.services, href: "/leistungen" },
     { label: t.nav.faq, href: "#faq" },
     { label: t.nav.contact, href: "#kontakt" },
   ];
