@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 
 import Button from "@/components/Button";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import { SITE } from "@/components/siteConfig";
-import { getServiceHref, SERVICE_PAGES } from "@/lib/services";
+import { getLangFromCookies, I18N } from "@/lib/i18n";
+import { getServiceHref, getServicePages } from "@/lib/services";
 
 export const metadata: Metadata = {
   title: "Leistungen",
@@ -16,7 +18,12 @@ export const metadata: Metadata = {
   alternates: { canonical: "/leistungen" },
 };
 
-export default function LeistungenPage() {
+export default async function LeistungenPage() {
+  const cookieStore = await cookies();
+  const lang = getLangFromCookies(cookieStore);
+  const t = I18N[lang];
+  const services = getServicePages(lang);
+
   return (
     <main id="main" className="pb-20 pt-10 sm:pb-28 sm:pt-14">
       <Container>
@@ -24,24 +31,24 @@ export default function LeistungenPage() {
           <div className="lg:col-span-6">
             <Reveal>
               <p className="inline-flex rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs font-medium text-zinc-600 shadow-sm">
-                MOVEBA GmbH · Berlin
+                {t.servicesPage.badge}
               </p>
             </Reveal>
             <Reveal delayMs={80}>
               <h1 className="mt-5 max-w-2xl text-4xl font-semibold tracking-tight text-zinc-950 sm:text-5xl">
-                Leistungen mit Struktur, Tempo und sauberem Ergebnis
+                {t.servicesPage.title}
               </h1>
             </Reveal>
             <Reveal delayMs={140}>
               <p className="mt-5 max-w-2xl text-base leading-relaxed text-zinc-600 sm:text-lg">
-                Von Umzügen bis zur Verkehrszeichenaufstellung: Hier finden Sie alle Leistungen mit direktem Weg zur passenden Detailseite.
+                {t.servicesPage.description}
               </p>
             </Reveal>
             <Reveal delayMs={200}>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Button href={`tel:${SITE.phones[0].value}`}>Jetzt anrufen</Button>
                 <Button href="/" variant="secondary">
-                  Zur Startseite
+                  {t.servicesPage.home}
                 </Button>
               </div>
             </Reveal>
@@ -63,10 +70,10 @@ export default function LeistungenPage() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-zinc-950/60 via-zinc-950/10 to-transparent" />
                 <div className="absolute left-5 top-5 max-w-sm rounded-2xl border border-white/20 bg-white/15 p-4 text-white backdrop-blur-sm">
                   <p className="text-xs font-medium uppercase tracking-[0.24em] text-white/70">
-                    Saubere Abwicklung
+                    {t.servicesPage.visualTitle}
                   </p>
                   <p className="mt-2 text-sm leading-relaxed text-white/85">
-                    Kurze Wege, klare Abläufe und direktes Feedback für jede Anfrage.
+                    {t.servicesPage.visualDescription}
                   </p>
                 </div>
               </div>
@@ -78,14 +85,14 @@ export default function LeistungenPage() {
       <div className="mt-16 space-y-20">
         <section>
           <SectionHeading
-            eyebrow="Übersicht"
-            title="Alle Leistungen auf einen Blick"
-            description="Wählen Sie die gewünschte Dienstleistung und springen Sie direkt zur passenden Detailseite."
+            eyebrow={t.servicesPage.overviewEyebrow}
+            title={t.servicesPage.overviewTitle}
+            description={t.servicesPage.overviewDescription}
           />
 
           <Container className="mt-10">
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {SERVICE_PAGES.map((service, idx) => (
+              {services.map((service, idx) => (
                 <Reveal key={service.slug} delayMs={idx * 60}>
                   <Link
                     href={getServiceHref(service.slug)}
@@ -109,7 +116,7 @@ export default function LeistungenPage() {
                         {service.intro}
                       </p>
                       <p className="mt-auto pt-6 text-sm font-medium text-zinc-900">
-                        Zur Detailseite →
+                        {t.servicesPage.detailLink} →
                       </p>
                     </div>
                   </Link>

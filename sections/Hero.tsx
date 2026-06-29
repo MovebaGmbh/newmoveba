@@ -14,7 +14,7 @@ export default function Hero({ lang }: Props) {
   const t = I18N[lang];
 
   return (
-    <section aria-label="Einführung" className="relative overflow-hidden">
+    <section aria-label={t.hero.ariaLabel} className="relative overflow-hidden">
       <div className="absolute inset-0">
         <Image
           src="/images/hero-bg-1280.jpg"
@@ -56,7 +56,7 @@ export default function Hero({ lang }: Props) {
                   {t.cta.callNow}
                 </Button>
                 <Button href="/leistungen" variant="secondary" size="lg">
-                  Leistungen ansehen
+                  {t.cta.viewServices}
                 </Button>
               </div>
             </Reveal>

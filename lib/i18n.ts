@@ -29,8 +29,11 @@ export const I18N = {
     },
     cta: {
       callNow: "Jetzt anrufen",
+      viewServices: "Leistungen ansehen",
+      requestQuote: "Jetzt Angebot anfordern",
     },
     hero: {
+      ariaLabel: "Einführung",
       bgAlt: "MOVEBA Transporter",
       pill: "Berlin · Umzüge · Entrümpelungen · Montage",
       title: "Umziehen ohne Stress – mit einem Team, das mitdenkt.",
@@ -107,6 +110,12 @@ export const I18N = {
         trafficSignsAlt:
           "Verkehrszeichenaufstellung: Absicherung mit Schildern und Pylonen",
       },
+      learnMore: "Mehr erfahren",
+      quickStartEyebrow: "Schneller Einstieg",
+      quickStartTitle: "Leistungen im Detail ansehen",
+      quickStartDescription:
+        "Jede Dienstleistung hat eine eigene Seite mit Ablauf, Vorteilen und häufigen Fragen.",
+      allServices: "Alle Leistungen",
     },
     faq: {
       eyebrow: "FAQ",
@@ -150,6 +159,37 @@ export const I18N = {
       privacy: "Datenschutzerklärung",
       imprint: "Impressum",
     },
+    servicesPage: {
+      metaTitle: "Leistungen",
+      metaDescription:
+        "Alle MOVEBA Leistungen im Überblick: Umzüge, Entrümpelungen, Möbellieferung, Möbelmontage und Verkehrszeichenaufstellung.",
+      badge: "MOVEBA GmbH · Berlin",
+      title: "Leistungen mit Struktur, Tempo und sauberem Ergebnis",
+      description:
+        "Von Umzügen bis zur Verkehrszeichenaufstellung: Hier finden Sie alle Leistungen mit direktem Weg zur passenden Detailseite.",
+      home: "Zur Startseite",
+      visualTitle: "Saubere Abwicklung",
+      visualDescription:
+        "Kurze Wege, klare Abläufe und direktes Feedback für jede Anfrage.",
+      overviewEyebrow: "Übersicht",
+      overviewTitle: "Alle Leistungen auf einen Blick",
+      overviewDescription:
+        "Wählen Sie die gewünschte Dienstleistung und springen Sie direkt zur passenden Detailseite.",
+      detailLink: "Zur Detailseite",
+    },
+    serviceDetailPage: {
+      badge: "MOVEBA Leistung",
+      backToServices: "Weitere Leistungen",
+      descriptionTitle: "Beschreibung",
+      benefitsTitle: "Ihr Vorteil",
+      processTitle: "Ablauf",
+      stepLabel: "Schritt",
+      contactTitle: "Jetzt Angebot anfordern",
+      contactDescription:
+        "Schicken Sie uns Ihre Anfrage direkt über das Formular oder rufen Sie uns an. Wir melden uns schnellstmöglich zurück.",
+      contactForm: "Zum Kontaktformular",
+      relatedTitle: "Weitere Leistungen",
+    },
   },
   en: {
     skipToContent: "Skip to content",
@@ -166,8 +206,11 @@ export const I18N = {
     },
     cta: {
       callNow: "Call now",
+      viewServices: "View services",
+      requestQuote: "Request a quote now",
     },
     hero: {
+      ariaLabel: "Introduction",
       bgAlt: "MOVEBA van",
       pill: "Berlin · Relocation · Clear-outs · Assembly",
       title: "Move without stress — with a team that thinks ahead.",
@@ -266,6 +309,12 @@ export const I18N = {
         deliveryAlt: "Two furniture movers carrying a sofa into a new home",
         trafficSignsAlt: "Traffic sign setup with cones and signage",
       },
+      learnMore: "Learn more",
+      quickStartEyebrow: "Quick start",
+      quickStartTitle: "View services in detail",
+      quickStartDescription:
+        "Each service has its own page with process, benefits and frequently asked questions.",
+      allServices: "All services",
     },
     faq: {
       eyebrow: "FAQ",
@@ -309,6 +358,37 @@ export const I18N = {
       privacy: "Privacy policy",
       imprint: "Imprint",
     },
+    servicesPage: {
+      metaTitle: "Services",
+      metaDescription:
+        "An overview of all MOVEBA services: relocation, clear-outs, furniture delivery, furniture assembly and traffic sign setup.",
+      badge: "MOVEBA GmbH · Berlin",
+      title: "Services with structure, speed and clean results",
+      description:
+        "From relocation to traffic sign setup: here you will find all services with a direct path to the right detail page.",
+      home: "Back to home",
+      visualTitle: "Clean execution",
+      visualDescription:
+        "Short paths, clear processes and direct feedback for every request.",
+      overviewEyebrow: "Overview",
+      overviewTitle: "All services at a glance",
+      overviewDescription:
+        "Choose the service you need and jump directly to the matching detail page.",
+      detailLink: "Go to detail page",
+    },
+    serviceDetailPage: {
+      badge: "MOVEBA service",
+      backToServices: "More services",
+      descriptionTitle: "Description",
+      benefitsTitle: "Your benefit",
+      processTitle: "Process",
+      stepLabel: "Step",
+      contactTitle: "Request a quote now",
+      contactDescription:
+        "Send us your request directly via the form or call us. We will get back to you as quickly as possible.",
+      contactForm: "Go to contact form",
+      relatedTitle: "More services",
+    },
   },
   ru: {
     skipToContent: "Перейти к содержанию",
@@ -325,8 +405,11 @@ export const I18N = {
     },
     cta: {
       callNow: "Позвонить",
+      viewServices: "Посмотреть услуги",
+      requestQuote: "Запросить предложение",
     },
     hero: {
+      ariaLabel: "Введение",
       bgAlt: "Фургон MOVEBA",
       pill: "Берлин · Переезды · Вывоз старой мебели · Сборка",
       title: "Переезд без стресса — с командой, которая думает наперёд.",
@@ -379,6 +462,12 @@ export const I18N = {
         deliveryAlt: "Два грузчика переносят диван в новый дом",
         trafficSignsAlt: "Установка дорожных знаков с конусами и табличками",
       },
+      learnMore: "Подробнее",
+      quickStartEyebrow: "Быстрый старт",
+      quickStartTitle: "Посмотреть услуги подробнее",
+      quickStartDescription:
+        "У каждой услуги есть своя страница с этапами, преимуществами и частыми вопросами.",
+      allServices: "Все услуги",
     },
     faq: {
       eyebrow: "FAQ",
@@ -421,6 +510,37 @@ export const I18N = {
       legal: "Правовая информация",
       privacy: "Политика конфиденциальности",
       imprint: "Реквизиты",
+    },
+    servicesPage: {
+      metaTitle: "Услуги",
+      metaDescription:
+        "Обзор всех услуг MOVEBA: переезды, вывоз, доставка мебели, сборка мебели и установка дорожных знаков.",
+      badge: "MOVEBA GmbH · Berlin",
+      title: "Услуги со структурой, скоростью и чистым результатом",
+      description:
+        "От переездов до установки дорожных знаков: здесь вы найдёте все услуги с прямым переходом на нужную подробную страницу.",
+      home: "На главную",
+      visualTitle: "Чистая организация",
+      visualDescription:
+        "Короткие пути, понятные процессы и быстрая обратная связь по каждой заявке.",
+      overviewEyebrow: "Обзор",
+      overviewTitle: "Все услуги с первого взгляда",
+      overviewDescription:
+        "Выберите нужную услугу и сразу перейдите на соответствующую подробную страницу.",
+      detailLink: "К странице услуги",
+    },
+    serviceDetailPage: {
+      badge: "Услуга MOVEBA",
+      backToServices: "Другие услуги",
+      descriptionTitle: "Описание",
+      benefitsTitle: "Ваше преимущество",
+      processTitle: "Процесс",
+      stepLabel: "Шаг",
+      contactTitle: "Запросить предложение",
+      contactDescription:
+        "Отправьте нам заявку через форму или позвоните. Мы свяжемся с вами как можно быстрее.",
+      contactForm: "К форме контакта",
+      relatedTitle: "Другие услуги",
     },
   },
 } as const;

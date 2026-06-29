@@ -71,7 +71,7 @@ export default function Services({ lang }: Props) {
                         {service.description}
                       </p>
                       <p className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-zinc-900">
-                        Mehr erfahren
+                        {t.services.learnMore}
                         <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">
                           →
                         </span>
@@ -114,15 +114,15 @@ export default function Services({ lang }: Props) {
               </Reveal>
               <Reveal delayMs={160}>
                 <div className="rounded-3xl border border-zinc-200 bg-zinc-950 p-6 text-white shadow-sm">
-                  <p className="text-sm font-medium text-white/70">Schneller Einstieg</p>
+                  <p className="text-sm font-medium text-white/70">{t.services.quickStartEyebrow}</p>
                   <h3 className="mt-2 text-xl font-semibold tracking-tight">
-                    Leistungen im Detail ansehen
+                    {t.services.quickStartTitle}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-white/75">
-                    Jede Dienstleistung hat eine eigene Seite mit Ablauf, Vorteilen und häufigen Fragen.
+                    {t.services.quickStartDescription}
                   </p>
                   <Button href="/leistungen" variant="secondary" className="mt-5 bg-white text-zinc-950 hover:bg-zinc-100">
-                    Alle Leistungen
+                    {t.services.allServices}
                   </Button>
                 </div>
               </Reveal>

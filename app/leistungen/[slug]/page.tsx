@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 
 import Button from "@/components/Button";
 import Container from "@/components/Container";
 import Reveal from "@/components/Reveal";
 import { SITE } from "@/components/siteConfig";
-import { getServiceBySlug, getServiceHref, SERVICE_PAGES } from "@/lib/services";
+import { getLangFromCookies, I18N } from "@/lib/i18n";
+import { getServiceBySlug, getServiceHref, getServicePages, SERVICE_PAGES } from "@/lib/services";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -19,7 +21,9 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const service = getServiceBySlug(slug);
+  const cookieStore = await cookies();
+  const lang = getLangFromCookies(cookieStore);
+  const service = getServiceBySlug(slug, lang);
 
   if (!service) {
     return {};
@@ -48,13 +52,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
-  const service = getServiceBySlug(slug);
+  const cookieStore = await cookies();
+  const lang = getLangFromCookies(cookieStore);
+  const t = I18N[lang];
+  const service = getServiceBySlug(slug, lang);
 
   if (!service) {
     notFound();
   }
 
-  const relatedServices = SERVICE_PAGES.filter((entry) => entry.slug !== service.slug).slice(0, 3);
+  const relatedServices = getServicePages(lang)
+    .filter((entry) => entry.slug !== service.slug)
+    .slice(0, 3);
 
   return (
     <main id="main" className="pb-20 pt-10 sm:pb-28 sm:pt-14">
@@ -89,7 +98,7 @@ export default async function ServicePage({ params }: Props) {
           <div className="lg:col-span-6">
             <Reveal>
               <p className="inline-flex rounded-full border border-zinc-200 bg-white px-3 py-1 text-xs font-medium text-zinc-600 shadow-sm">
-                MOVEBA Leistung
+                {t.serviceDetailPage.badge}
               </p>
             </Reveal>
             <Reveal delayMs={80}>
@@ -104,9 +113,9 @@ export default async function ServicePage({ params }: Props) {
             </Reveal>
             <Reveal delayMs={200}>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button href={`tel:${SITE.phones[0].value}`}>Jetzt Angebot anfordern</Button>
+                <Button href={`tel:${SITE.phones[0].value}`}>{t.cta.requestQuote}</Button>
                 <Button href="/leistungen" variant="secondary">
-                  Weitere Leistungen
+                  {t.serviceDetailPage.backToServices}
                 </Button>
               </div>
             </Reveal>
@@ -138,7 +147,7 @@ export default async function ServicePage({ params }: Props) {
             <div className="grid gap-10 lg:grid-cols-12">
               <div className="lg:col-span-7">
                 <h2 className="text-2xl font-semibold tracking-tight text-zinc-950 sm:text-3xl">
-                  Beschreibung
+                  {t.serviceDetailPage.descriptionTitle}
                 </h2>
                 <p className="mt-4 text-base leading-relaxed text-zinc-600">
                   {service.description}
@@ -157,13 +166,13 @@ export default async function ServicePage({ params }: Props) {
 
               <div className="lg:col-span-5">
                 <div className="rounded-3xl border border-zinc-200 bg-zinc-950 p-6 text-white shadow-sm">
-                  <p className="text-sm font-medium text-white/70">Ihr Vorteil</p>
+                  <p className="text-sm font-medium text-white/70">{t.serviceDetailPage.benefitsTitle}</p>
                   <p className="mt-3 text-lg font-semibold tracking-tight">{service.ctaTitle}</p>
                   <p className="mt-3 text-sm leading-relaxed text-white/75">
                     {service.ctaText}
                   </p>
                   <Button href={`tel:${SITE.phones[0].value}`} variant="secondary" className="mt-6 bg-white text-zinc-950 hover:bg-zinc-100">
-                    Jetzt Angebot anfordern
+                    {t.cta.requestQuote}
                   </Button>
                 </div>
               </div>
@@ -174,14 +183,14 @@ export default async function ServicePage({ params }: Props) {
         <section>
           <Container>
             <h2 className="text-2xl font-semibold tracking-tight text-zinc-950 sm:text-3xl">
-              Ablauf
+              {t.serviceDetailPage.processTitle}
             </h2>
             <div className="mt-8 grid gap-4 lg:grid-cols-3">
               {service.process.map((step, idx) => (
                 <Reveal key={step.title} delayMs={idx * 60}>
                   <div className="h-full rounded-3xl border border-zinc-200 bg-white p-6 shadow-sm">
                     <p className="text-xs font-medium uppercase tracking-[0.22em] text-zinc-400">
-                      Schritt {idx + 1}
+                      {t.serviceDetailPage.stepLabel} {idx + 1}
                     </p>
                     <h3 className="mt-3 text-lg font-semibold text-zinc-950">{step.title}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-zinc-600">{step.description}</p>
@@ -198,18 +207,18 @@ export default async function ServicePage({ params }: Props) {
               <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
                 <div className="lg:col-span-8">
                   <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                    Jetzt Angebot anfordern
+                    {t.serviceDetailPage.contactTitle}
                   </h2>
                   <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/75">
-                    Schicken Sie uns Ihre Anfrage direkt über das Formular oder rufen Sie uns an. Wir melden uns schnellstmöglich zurück.
+                    {t.serviceDetailPage.contactDescription}
                   </p>
                 </div>
                 <div className="flex flex-col gap-3 lg:col-span-4 lg:items-end">
                   <Button href={`tel:${SITE.phones[0].value}`} variant="secondary" className="bg-white text-zinc-950 hover:bg-zinc-100">
-                    Jetzt anrufen
+                    {t.cta.callNow}
                   </Button>
                   <Button href="/#kontakt" variant="secondary" className="border border-white/20 bg-white/10 text-white hover:bg-white/15">
-                    Zum Kontaktformular
+                    {t.serviceDetailPage.contactForm}
                   </Button>
                 </div>
               </div>
@@ -220,7 +229,7 @@ export default async function ServicePage({ params }: Props) {
         <section>
           <Container>
             <h2 className="text-2xl font-semibold tracking-tight text-zinc-950 sm:text-3xl">
-              Weitere Leistungen
+              {t.serviceDetailPage.relatedTitle}
             </h2>
             <div className="mt-8 grid gap-4 md:grid-cols-3">
               {relatedServices.map((entry) => (
